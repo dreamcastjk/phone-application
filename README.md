@@ -1,4 +1,4 @@
-# phone-application
+git remote add origin https://github.com/dreamcastjk/phone-application.git# phone-application
 To install:
 1) git clone https://github.com/ovsyanikov94/phone-application/
 2) open project
