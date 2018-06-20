@@ -6,6 +6,7 @@ import PhoneViewer from '../phone-viewer/PhoneViewer';
 import Component from "../component/component";
 
 
+
 export default class PhonePage extends Component{
 
     constructor( options ){
@@ -42,8 +43,13 @@ export default class PhonePage extends Component{
 
     }//onButtonBack
 
-    async _load(){
+    onButtonAddToCart(){
 
+        console.log('onButtonAddToCart');
+
+    }//onButtonAddToCart
+
+    async _load(){
 
         try{
 
@@ -55,12 +61,13 @@ export default class PhonePage extends Component{
 
             this.on('phoneSelected' , this.onPhoneSelected.bind(this) , '[data-component="phone-catalogue"]');
             this.on('moveBack' , this.onButtonBack.bind(this) , '[data-component="phone-viewer"]');
+            this.on('addToCart', this.onButtonAddToCart.bind(this), '[data-component="phone-viewer"]');
 
         }//try
         catch(ex){
             console.log('HTTP SERVICE ERROR: ' , ex);
         }//catch
 
-    }
+    }//_load
 
-}
+}//class PhonePage

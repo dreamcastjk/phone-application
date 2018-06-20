@@ -33,14 +33,12 @@ export default class PhoneCatalogue extends Component{
 
         let target = event.target;
 
-
         if( target.matches('a') || target.matches('img') ){
 
             let parent = target.closest('[data-element="phone"]');
 
             if(parent){
 
-                console.log( parent.dataset);
                 this._phoneSelectedEvent.detail.phoneID = parent.dataset.phoneId;
                 this._element.dispatchEvent(this._phoneSelectedEvent);
 
